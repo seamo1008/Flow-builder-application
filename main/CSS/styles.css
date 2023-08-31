@@ -1,33 +1,32 @@
-/* Add this to your styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f1fb83;
 }
 
 .container {
     display: flex;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 .canvas {
     flex: 2;
-    padding: 20px;
-    border: 1px solid black; /* Outline with a black box */
+    padding: 2px;
+    border: 1px solid black; /* Outline canvas area with a black box - should we change for aesthetics?*/
     border-radius: 4px;
-    overflow: hidden; /* Prevent content overflow */
-    display: flex; /* Use flex to center content vertically */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 400px; /* Set the height to match the width */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
 }
 
 .menu {
-    width: 200px; /* Width of the button menu */
-    margin-left: 20px; /* Add space between the canvas and the menu */
+    width: 150px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -36,14 +35,14 @@ body {
 button {
     padding: 10px;
     border: none;
-    background-color: #007bff;
+    background-color: #3d97f7;
     color: white;
     cursor: pointer;
     border-radius: 4px;
 }
 
 .canvas-content {
-    background-color: gray;
-    width: 100%; /* Set the width to 100% */
-    height: 100%; /* Set the height to 100% */
+    background-color: rgb(244, 241, 241);
+    width: 100%;
+    height: 100%;
 }
