@@ -13,6 +13,7 @@ body {
 }
 
 .canvas {
+    position: relative;
     flex: 2;
     padding: 2px;
     border: 1px solid black; /* Outline canvas area with a black box - should we change for aesthetics?*/
@@ -22,6 +23,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 600px;
+    cursor: grab;
+    touch-action: none;
 }
 
 .menu {
@@ -45,9 +48,11 @@ button {
     background-color: rgb(244, 241, 241);
     width: 100%;
     height: 100%;
+    overflow: auto;
 }
 
 .step {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,19 +63,73 @@ button {
     border: 1px solid black;
     border-radius: 10px;
     margin: 20px auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .step-header {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 11px 0;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
-    width: 100%
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
 }
 
 .step-content {
     flex-grow: 1;
     width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.step.dragging {
+    opacity: 0.7;
+    border: 2px darksalmon
+}
+
+.add-step-button {
+    background-color: transparent;
+    color: #3d97f7;
+    border: none;
+    border-radius: 20%;
+    width: 25px;
+    height: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+}
+
+.text-box {
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: calc(100% - 40px);
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+}
+
+.text-box textarea {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 12px;
+    text-align: left;
+    resize: none;
+    padding: 5px;
+    box-sizing: border-box;
 }
